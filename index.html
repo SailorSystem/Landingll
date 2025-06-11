@@ -6,7 +6,6 @@
     <title>Lluqui Ñawi - Fomento a la Lectura</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Animaciones personalizadas */
         @keyframes pulse {
@@ -27,55 +26,26 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        body {
-            font-family: 'Quicksand', sans-serif;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Baloo', cursive;
-        }
-        .bg-deep-purple {
-            background-color: #5B3C88;
-        }
-        .text-deep-purple {
-            color: #5B3C88;
-        }
-        .bg-soft-lavender {
-            background-color: #BCAEDC;
-        }
-        .text-soft-lavender {
-            color: #BCAEDC;
-        }
-        .bg-soft-earth {
-            background-color: #C6905B;
-        }
-        .text-soft-earth {
-            color: #C6905B;
-        }
-        .bg-natural-green {
-            background-color: #A6B48F;
-        }
-        .text-natural-green {
-            color: #A6B48F;
-        }
     </style>
 </head>
-<body class="font-sans bg-gradient-to-b from-soft-lavender to-deep-purple">
+<body class="font-sans bg-gradient-to-b from-indigo-50 to-purple-50">
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <i class="fas fa-book-open text-3xl text-natural-green"></i>
+                <i class="fas fa-book-open text-3xl text-indigo-600"></i>
                 <h1 class="text-2xl font-bold text-gray-800">
-                    <span class="text-deep-purple">Lluqui</span> Ñawi
+                    <span class="text-indigo-600">Lluqui</span> Ñawi
                 </h1>
             </div>
             
             <!-- Navegación -->
             <nav class="hidden md:flex space-x-8">
-                <button onclick="openTab('home')" class="tab-btn font-medium text-gray-700 hover:text-deep-purple transition">Inicio</button>
-                <button onclick="openTab('features')" class="tab-btn font-medium text-gray-700 hover:text-deep-purple transition">Características</button>
-                <button onclick="openTab('info')" class="tab-btn font-medium text-gray-700 hover:text-deep-purple transition">Información</button>
+                <button onclick="openTab('home')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Inicio</button>
+                <button onclick="openTab('features')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Características</button>
+                <button onclick="openTab('info')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Información</button>
+                <!--<button onclick="openTab('contact')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Contacto</button>-->
             </nav>
             
             <!-- Botón móvil -->
@@ -87,9 +57,10 @@
         <!-- Menú móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
             <div class="flex flex-col space-y-3">
-                <button onclick="openTab('home')" class="tab-btn py-2 font-medium text-gray-700 hover:text-deep-purple transition">Inicio</button>
-                <button onclick="openTab('features')" class="tab-btn py-2 font-medium text-gray-700 hover:text-deep-purple transition">Características</button>
-                <button onclick="openTab('info')" class="tab-btn py-2 font-medium text-gray-700 hover:text-deep-purple transition">Información</button>
+                <button onclick="openTab('home')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Inicio</button>
+                <button onclick="openTab('features')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Características</button>
+                <button onclick="openTab('info')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Información</button>
+                <!--<button onclick="openTab('contact')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Contacto</button>-->
             </div>
         </div>
     </header>
@@ -101,7 +72,7 @@
             <section class="flex flex-col md:flex-row items-center justify-between gap-12">
                 <div class="md:w-1/2">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                        Descubre el placer de leer con <span class="text-deep-purple">Lluqui Ñawi</span>
+                        Descubre el placer de leer con <span class="text-indigo-600">Lluqui Ñawi</span>
                     </h2>
                     <p class="text-lg text-gray-600 mb-8">
                         Una aplicación diseñada para fomentar la lectura en todas las edades. 
@@ -109,7 +80,7 @@
                         comunidad de amantes de los libros.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="bg-deep-purple hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2 animate-pulse-slow">
+                        <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2 animate-pulse-slow">
                             <i class="fab fa-google-play text-xl"></i>
                             Descargar en Play Store
                         </a>
@@ -124,19 +95,41 @@
                          class="rounded-xl shadow-xl w-full max-w-md mx-auto transform rotate-3">
                 </div>
             </section>
+            
+            <!-- Estadísticas 
+            <section class="mt-24">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-4xl font-bold text-indigo-600 mb-2">10K+</div>
+                        <div class="text-gray-600">Usuarios activos</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-4xl font-bold text-indigo-600 mb-2">5K+</div>
+                        <div class="text-gray-600">Libros disponibles</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-4xl font-bold text-indigo-600 mb-2">20+</div>
+                        <div class="text-gray-600">Categorías</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-4xl font-bold text-indigo-600 mb-2">4.9</div>
+                        <div class="text-gray-600">Valoración promedio</div>
+                    </div>
+                </div>
+            </section>-->
         </div>
         
         <!-- Pestaña Características -->
         <div id="features" class="tab-content">
             <section>
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                    Nuestras <span class="text-deep-purple">Características</span>
+                    Nuestras <span class="text-indigo-600">Características</span>
                 </h2>
                 
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Característica 1 -->
                     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-deep-purple mb-4 text-4xl">
+                        <div class="text-indigo-600 mb-4 text-4xl">
                             <i class="fas fa-book-reader"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Recomendaciones inteligentes</h3>
@@ -147,7 +140,7 @@
                     
                     <!-- Característica 2 -->
                     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-deep-purple mb-4 text-4xl">
+                        <div class="text-indigo-600 mb-4 text-4xl">
                             <i class="fas fa-trophy"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Desafíos de lectura</h3>
@@ -158,7 +151,7 @@
                     
                     <!-- Característica 3 -->
                     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-deep-purple mb-4 text-4xl">
+                        <div class="text-indigo-600 mb-4 text-4xl">
                             <i class="fas fa-users"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Ñawibot</h3>
@@ -169,7 +162,7 @@
                     
                     <!-- Característica 4 -->
                     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-deep-purple mb-4 text-4xl">
+                        <div class="text-indigo-600 mb-4 text-4xl">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Seguimiento de progreso</h3>
@@ -180,7 +173,7 @@
                     
                     <!-- Característica 5 -->
                     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-deep-purple mb-4 text-4xl">
+                        <div class="text-indigo-600 mb-4 text-4xl">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Lectura offline</h3>
@@ -191,7 +184,7 @@
                     
                     <!-- Característica 6 -->
                     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-deep-purple mb-4 text-4xl">
+                        <div class="text-indigo-600 mb-4 text-4xl">
                             <i class="fas fa-child"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Modo infantil</h3>
@@ -202,7 +195,7 @@
                 </div>
                 
                 <div class="mt-12 text-center">
-                    <a href="https://play.google.com/store" target="_blank" class="bg-deep-purple hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2">
+                    <a href="https://play.google.com/store" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2">
                         <i class="fab fa-google-play text-xl"></i>
                         Descárgalo ahora
                     </a>
@@ -214,7 +207,7 @@
         <div id="info" class="tab-content">
             <section>
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                    Acerca de <span class="text-deep-purple">Lluqui Ñawi</span>
+                    Acerca de <span class="text-indigo-600">Lluqui Ñawi</span>
                 </h2>
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
@@ -235,9 +228,9 @@
                                 y trabajamos cada día para acercar los libros a más personas.
                             </p>
                             <div class="flex gap-4">
-                                <span class="bg-soft-lavender text-deep-purple px-3 py-1 rounded-full text-sm font-medium">Educación</span>
-                                <span class="bg-soft-lavender text-deep-purple px-3 py-1 rounded-full text-sm font-medium">Cultura</span>
-                                <span class="bg-soft-lavender text-deep-purple px-3 py-1 rounded-full text-sm font-medium">Tecnología</span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Educación</span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Cultura</span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Tecnología</span>
                             </div>
                         </div>
                     </div>
@@ -261,7 +254,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                 </span>
-                                <span class="text-deep-purple text-sm font-medium">Clásico</span>
+                                <span class="text-indigo-600 text-sm font-medium">Clásico</span>
                             </div>
                         </div>
                     </div>
@@ -282,7 +275,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                 </span>
-                                <span class="text-deep-purple text-sm font-medium">Realismo mágico</span>
+                                <span class="text-indigo-600 text-sm font-medium">Realismo mágico</span>
                             </div>
                         </div>
                     </div>
@@ -303,7 +296,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="far fa-star"></i>
                                 </span>
-                                <span class="text-deep-purple text-sm font-medium">Novela romántica</span>
+                                <span class="text-indigo-600 text-sm font-medium">Novela romántica</span>
                             </div>
                         </div>
                     </div>
@@ -322,7 +315,7 @@
         <div id="contact" class="tab-content">
             <section>
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                    <span class="text-deep-purple">Contáctanos</span>
+                    <span class="text-indigo-600">Contáctanos</span>
                 </h2>
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden">
@@ -332,12 +325,159 @@
                             <form class="space-y-4">
                                 <div>
                                     <label for="name" class="block text-gray-700 mb-1">Nombre</label>
-                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-deep-purple">
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-gray-700 mb-1">Correo electrónico</label>
-                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-deep-purple">
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                 </div>
                                 <div>
                                     <label for="message" class="block text-gray-700 mb-1">Mensaje</label>
-                                    <textarea id="message" rows
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                                </div>
+                                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-all duration-300 w-full">Enviar mensaje</button>
+                            </form>
+                        </div>
+                        <div class="md:w-1/2 bg-indigo-50 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Información de contacto</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-map-marker-alt mt-1 text-indigo-600"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Dirección</h4>
+                                            <p class="text-gray-600">Av. La Cultura 123, Cusco, Perú</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-envelope mt-1 text-indigo-600"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Correo</h4>
+                                            <p class="text-gray-600">contacto@lluquiñawi.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fas fa-phone-alt mt-1 text-indigo-600"></i>
+                                        <div>
+                                            <h4 class="font-medium text-gray-800">Teléfono</h4>
+                                            <p class="text-gray-600">+51 987 654 321</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-medium text-gray-800 mb-3">Síguenos</h4>
+                                <div class="flex gap-4">
+                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2">
+                        <i class="fab fa-google-play text-xl"></i>
+                        Descarga nuestra app
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-book-open text-2xl text-indigo-400"></i>
+                        <h3 class="text-xl font-bold">
+                            <span class="text-indigo-400">Lluqui</span> Ñawi
+                        </h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Fomentando la lectura, una página a la vez.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="openTab('home')" class="text-gray-400 hover:text-white transition">Inicio</button></li>
+                        <li><button onclick="openTab('features')" class="text-gray-400 hover:text-white transition">Características</button></li>
+                        <li><button onclick="openTab('info')" class="text-gray-400 hover:text-white transition">Información</button></li>
+                        <!--<li><button onclick="openTab('contact')" class="text-gray-400 hover:text-white transition">Contacto</button></li>-->
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Descarga la app</h4>
+                    <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition">
+                        <i class="fab fa-google-play"></i>
+                        Play Store
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="my-8 border-gray-700">
+            
+            <div class="text-center text-gray-400">
+                <p>&copy; 2025 Lluqui Ñawi. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad de pestañas
+        function openTab(tabName) {
+            // Ocultar todas las pestañas
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Mostrar la pestaña seleccionada
+            document.getElementById(tabName).classList.add('active');
+            
+            // Cerrar menú móvil si está abierto
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+        
+        // Menú móvil
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Marcar el botón activo en el menú
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                tabButtons.forEach(b => b.classList.remove('text-indigo-600'));
+                this.classList.add('text-indigo-600');
+            });
+        });
+    </script>
+</body>
+</html>
