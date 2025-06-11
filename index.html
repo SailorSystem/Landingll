@@ -6,11 +6,21 @@
     <title>Lluqui Ñawi - Fomento a la Lectura</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Animaciones personalizadas */
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        h1, h2, h3, h4, .font-bold, .font-semibold {
+            font-family: 'Baloo 2', cursive;
         }
         .animate-pulse-slow {
             animation: pulse 4s infinite;
@@ -34,36 +44,35 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center space-x-2">
-                <i class="fas fa-book-open text-3xl text-indigo-600"></i>
-                <h1 class="text-2xl font-bold text-gray-800">
-                    <span class="text-indigo-600">Lluqui</span> Ñawi
+                <i class="fas fa-book-open text-3xl text-[#5B3C88]"></i>
+                <h1 class="text-2xl font-bold">
+                    <span class="text-[#5B3C88]">Lluqui</span> Ñawi
                 </h1>
             </div>
-            
+
             <!-- Navegación -->
             <nav class="hidden md:flex space-x-8">
-                <button onclick="openTab('home')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Inicio</button>
-                <button onclick="openTab('features')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Características</button>
-                <button onclick="openTab('info')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Información</button>
-                <!--<button onclick="openTab('contact')" class="tab-btn font-medium text-gray-700 hover:text-indigo-600 transition">Contacto</button>-->
+                <button onclick="openTab('home')" class="tab-btn font-medium text-gray-700 hover:text-[#A6B48F] transition">Inicio</button>
+                <button onclick="openTab('features')" class="tab-btn font-medium text-gray-700 hover:text-[#A6B48F] transition">Características</button>
+                <button onclick="openTab('info')" class="tab-btn font-medium text-gray-700 hover:text-[#A6B48F] transition">Información</button>
             </nav>
-            
+
             <!-- Botón móvil -->
             <button id="mobile-menu-button" class="md:hidden text-gray-700">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-        
+
         <!-- Menú móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
             <div class="flex flex-col space-y-3">
-                <button onclick="openTab('home')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Inicio</button>
-                <button onclick="openTab('features')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Características</button>
-                <button onclick="openTab('info')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Información</button>
-                <!--<button onclick="openTab('contact')" class="tab-btn py-2 font-medium text-gray-700 hover:text-indigo-600 transition">Contacto</button>-->
+                <button onclick="openTab('home')" class="tab-btn py-2 font-medium text-gray-700 hover:text-[#A6B48F] transition">Inicio</button>
+                <button onclick="openTab('features')" class="tab-btn py-2 font-medium text-gray-700 hover:text-[#A6B48F] transition">Características</button>
+                <button onclick="openTab('info')" class="tab-btn py-2 font-medium text-gray-700 hover:text-[#A6B48F] transition">Información</button>
             </div>
         </div>
     </header>
+
 
     <!-- Contenido de las pestañas -->
     <main class="container mx-auto px-4 py-12">
@@ -398,51 +407,50 @@
     </main>
     
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="bg-[#5B3C88] text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-book-open text-2xl text-indigo-400"></i>
+                        <i class="fas fa-book-open text-2xl text-[#A6B48F]"></i>
                         <h3 class="text-xl font-bold">
-                            <span class="text-indigo-400">Lluqui</span> Ñawi
+                            <span class="text-[#A6B48F]">Lluqui</span> Ñawi
                         </h3>
                     </div>
-                    <p class="text-gray-400">
+                    <p class="text-[#BCAEDC]">
                         Fomentando la lectura, una página a la vez.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
                     <ul class="space-y-2">
-                        <li><button onclick="openTab('home')" class="text-gray-400 hover:text-white transition">Inicio</button></li>
-                        <li><button onclick="openTab('features')" class="text-gray-400 hover:text-white transition">Características</button></li>
-                        <li><button onclick="openTab('info')" class="text-gray-400 hover:text-white transition">Información</button></li>
-                        <!--<li><button onclick="openTab('contact')" class="text-gray-400 hover:text-white transition">Contacto</button></li>-->
+                        <li><button onclick="openTab('home')" class="text-[#BCAEDC] hover:text-white transition">Inicio</button></li>
+                        <li><button onclick="openTab('features')" class="text-[#BCAEDC] hover:text-white transition">Características</button></li>
+                        <li><button onclick="openTab('info')" class="text-[#BCAEDC] hover:text-white transition">Información</button></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
+                        <li><a href="#" class="text-[#BCAEDC] hover:text-white transition">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-[#BCAEDC] hover:text-white transition">Política de privacidad</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Descarga la app</h4>
-                    <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition">
+                    <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-[#A6B48F] hover:bg-[#8BA170] text-white px-4 py-2 rounded-lg transition">
                         <i class="fab fa-google-play"></i>
                         Play Store
                     </a>
                 </div>
             </div>
-            
-            <hr class="my-8 border-gray-700">
-            
-            <div class="text-center text-gray-400">
+
+            <hr class="my-8 border-[#BCAEDC]">
+
+            <div class="text-center text-[#BCAEDC]">
                 <p>&copy; 2025 Lluqui Ñawi. Todos los derechos reservados.</p>
             </div>
         </div>
