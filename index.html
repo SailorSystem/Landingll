@@ -7,36 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Animaciones personalizadas */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;600&display=swap');
-
-        body {
-            font-family: 'Quicksand', sans-serif;
-        }
-        h1, h2, h3, h4, .font-bold, .font-semibold {
-            font-family: 'Baloo 2', cursive;
-        }
-        .animate-pulse-slow {
-            animation: pulse 4s infinite;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        /* Efecto hover para cards */
-        .book-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-sans bg-gradient-to-b from-indigo-50 to-purple-50">
     <!-- Header -->
@@ -73,7 +44,6 @@
         </div>
     </header>
 
-
     <!-- Contenido de las pestañas -->
     <main class="container mx-auto px-4 py-12">
         <!-- Pestaña Inicio -->
@@ -104,28 +74,6 @@
                          class="rounded-xl shadow-xl w-full max-w-md mx-auto transform rotate-3">
                 </div>
             </section>
-            
-            <!-- Estadísticas 
-            <section class="mt-24">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                        <div class="text-4xl font-bold text-indigo-600 mb-2">10K+</div>
-                        <div class="text-gray-600">Usuarios activos</div>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                        <div class="text-4xl font-bold text-indigo-600 mb-2">5K+</div>
-                        <div class="text-gray-600">Libros disponibles</div>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                        <div class="text-4xl font-bold text-indigo-600 mb-2">20+</div>
-                        <div class="text-gray-600">Categorías</div>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                        <div class="text-4xl font-bold text-indigo-600 mb-2">4.9</div>
-                        <div class="text-gray-600">Valoración promedio</div>
-                    </div>
-                </div>
-            </section>-->
         </div>
         
         <!-- Pestaña Características -->
@@ -134,75 +82,9 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
                     Nuestras <span class="text-indigo-600">Características</span>
                 </h2>
-                
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Característica 1 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-indigo-600 mb-4 text-4xl">
-                            <i class="fas fa-book-reader"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Recomendaciones inteligentes</h3>
-                        <p class="text-gray-600">
-                            Basado en tus gustos y hábitos de lectura, te sugerimos libros que seguramente amarás.
-                        </p>
-                    </div>
-                    
-                    <!-- Característica 2 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-indigo-600 mb-4 text-4xl">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Desafíos de lectura</h3>
-                        <p class="text-gray-600">
-                            Participa en retos mensuales y gana insignias por tus logros literarios.
-                        </p>
-                    </div>
-                    
-                    <!-- Característica 3 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-indigo-600 mb-4 text-4xl">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Ñawibot</h3>
-                        <p class="text-gray-600">
-                            Chatbot integrado para el fácil uso de la aplicación.
-                        </p>
-                    </div>
-                    
-                    <!-- Característica 4 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-indigo-600 mb-4 text-4xl">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Seguimiento de progreso</h3>
-                        <p class="text-gray-600">
-                            Visualiza estadísticas de tus hábitos de lectura y mejora continuamente.
-                        </p>
-                    </div>
-                    
-                    <!-- Característica 5 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-indigo-600 mb-4 text-4xl">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Lectura offline</h3>
-                        <p class="text-gray-600">
-                            Descarga tus libros favoritos y lee sin necesidad de conexión a internet.
-                        </p>
-                    </div>
-                    
-                    <!-- Característica 6 -->
-                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                        <div class="text-indigo-600 mb-4 text-4xl">
-                            <i class="fas fa-child"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Modo infantil</h3>
-                        <p class="text-gray-600">
-                            Contenido adecuado para niños con herramientas para fomentar su lectura.
-                        </p>
-                    </div>
+                    <!-- Características aquí -->
                 </div>
-                
                 <div class="mt-12 text-center">
                     <a href="https://play.google.com/store" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2">
                         <i class="fab fa-google-play text-xl"></i>
@@ -218,7 +100,6 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
                     Acerca de <span class="text-indigo-600">Lluqui Ñawi</span>
                 </h2>
-                
                 <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
                     <div class="md:flex">
                         <div class="md:w-1/2">
@@ -244,73 +125,10 @@
                         </div>
                     </div>
                 </div>
-                
                 <h3 class="text-2xl font-semibold text-center mb-8">Libros destacados</h3>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <!-- Libro 1 -->
-                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                             alt="Libro destacado 1" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h4 class="font-semibold text-lg mb-1">El Principito</h4>
-                            <p class="text-gray-500 text-sm mb-2">Antoine de Saint-Exupéry</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </span>
-                                <span class="text-indigo-600 text-sm font-medium">Clásico</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Libro 2 -->
-                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                             alt="Libro destacado 2" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h4 class="font-semibold text-lg mb-1">Cien Años de Soledad</h4>
-                            <p class="text-gray-500 text-sm mb-2">Gabriel García Márquez</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                                <span class="text-indigo-600 text-sm font-medium">Realismo mágico</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Libro 3 -->
-                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                             alt="Libro destacado 3" 
-                             class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h4 class="font-semibold text-lg mb-1">Orgullo y Prejuicio</h4>
-                            <p class="text-gray-500 text-sm mb-2">Jane Austen</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-yellow-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </span>
-                                <span class="text-indigo-600 text-sm font-medium">Novela romántica</span>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Libros destacados aquí -->
                 </div>
-                
                 <div class="text-center">
                     <p class="text-lg text-gray-600 mb-6">
                         "Un libro abierto es un cerebro que habla; cerrado, un amigo que espera; olvidado, un alma que perdona; destruido, un corazón que llora."
@@ -326,7 +144,6 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
                     <span class="text-indigo-600">Contáctanos</span>
                 </h2>
-                
                 <div class="bg-white rounded-xl shadow-md overflow-hidden">
                     <div class="md:flex">
                         <div class="md:w-1/2 p-8">
@@ -374,7 +191,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <div class="mt-8">
                                 <h4 class="font-medium text-gray-800 mb-3">Síguenos</h4>
                                 <div class="flex gap-4">
@@ -395,7 +211,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="mt-12 text-center">
                     <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2">
                         <i class="fab fa-google-play text-xl"></i>
@@ -456,36 +271,6 @@
         </div>
     </footer>
 
-    <script>
-        // Funcionalidad de pestañas
-        function openTab(tabName) {
-            // Ocultar todas las pestañas
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Mostrar la pestaña seleccionada
-            document.getElementById(tabName).classList.add('active');
-            
-            // Cerrar menú móvil si está abierto
-            document.getElementById('mobile-menu').classList.add('hidden');
-        }
-        
-        // Menú móvil
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-        
-        // Marcar el botón activo en el menú
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        tabButtons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                tabButtons.forEach(b => b.classList.remove('text-indigo-600'));
-                this.classList.add('text-indigo-600');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
