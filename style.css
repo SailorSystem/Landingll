@@ -24,15 +24,35 @@
     --gris-suave: #f9f9f9;
 }
 
-/* Cuerpo general */
+/* style.css */
+
+/* Tipografías específicas */
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: var(--morado-profundo);
-    color: var(--blanco);
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
 }
+
+h1, h2, h3, h4 {
+    font-family: 'Baloo 2', cursive;
+}
+
+/* Menú móvil */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu.show {
+    display: block;
+}
+
+/* Botón de menú */
+#mobile-menu-button {
+    transition: transform 0.2s;
+}
+
+#mobile-menu-button:hover {
+    transform: scale(1.1);
+}
+
 
 /* Encabezado */
 header {
