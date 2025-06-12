@@ -73,7 +73,7 @@ header h1 {
 
 /* Navegación */
 nav {
-    background-color: var(--tierra-suave);
+    background-color: var(--morado-profundo);
     display: flex;
     justify-content: center;
     padding: 0.5rem;
