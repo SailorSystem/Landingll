@@ -11,39 +11,38 @@
 </head>
 <body class="font-sans bg-gradient-to-b from-indigo-50 to-purple-50">
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-book-open text-3xl text-[#5B3C88]"></i>
-                <h1 class="text-2xl font-bold">
-                    <span class="text-[#5B3C88]">Lluqui</span> Ñawi
-                </h1>
-            </div>
+<header class="bg-[#5B3C88] text-white sticky top-0 z-50 shadow-md">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-book-open text-3xl text-white"></i>
+      <h1 class="text-2xl font-bold font-baloo">
+        Lluqui <span class="text-[#A6B48F]">Ñawi</span>
+      </h1>
+    </div>
 
-            <!-- Navegación -->
-            <nav class="hidden md:flex space-x-8">
-                <button onclick="openTab('home')" class="tab-btn font-medium text-gray-700 hover:text-[#A6B48F] transition">Inicio</button>
-                <button onclick="openTab('features')" class="tab-btn font-medium text-gray-700 hover:text-[#A6B48F] transition">Características</button>
-                <button onclick="openTab('info')" class="tab-btn font-medium text-gray-700 hover:text-[#A6B48F] transition">Información</button>
-            </nav>
+    <!-- Menú grande -->
+    <nav class="hidden md:flex space-x-6 font-quicksand">
+      <button onclick="openTab('home')" class="tab-btn hover:text-[#BCAEDC] transition duration-300">Inicio</button>
+      <button onclick="openTab('features')" class="tab-btn hover:text-[#BCAEDC] transition duration-300">Características</button>
+      <button onclick="openTab('info')" class="tab-btn hover:text-[#BCAEDC] transition duration-300">Información</button>
+    </nav>
 
-            <!-- Botón móvil -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-700">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
+    <!-- Botón menú móvil -->
+    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
 
-        <!-- Menú móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
-            <div class="flex flex-col space-y-3">
-                <button onclick="openTab('home')" class="tab-btn py-2 font-medium text-gray-700 hover:text-[#A6B48F] transition">Inicio</button>
-                <button onclick="openTab('features')" class="tab-btn py-2 font-medium text-gray-700 hover:text-[#A6B48F] transition">Características</button>
-                <button onclick="openTab('info')" class="tab-btn py-2 font-medium text-gray-700 hover:text-[#A6B48F] transition">Información</button>
-            </div>
-        </div>
-    </header>
-
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#5B3C88] px-4 pb-4">
+    <div class="flex flex-col space-y-3 font-quicksand">
+      <button onclick="openTab('home'); toggleMobileMenu()" class="tab-btn hover:text-[#BCAEDC] py-2 transition">Inicio</button>
+      <button onclick="openTab('features'); toggleMobileMenu()" class="tab-btn hover:text-[#BCAEDC] py-2 transition">Características</button>
+      <button onclick="openTab('info'); toggleMobileMenu()" class="tab-btn hover:text-[#BCAEDC] py-2 transition">Información</button>
+    </div>
+  </div>
+</header>
     <!-- Contenido de las pestañas -->
     <main class="container mx-auto px-4 py-12">
         <!-- Pestaña Inicio -->
