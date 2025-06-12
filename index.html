@@ -1,311 +1,470 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lluqui Ñawi - Fomento a la Lectura</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body class="font-sans bg-gradient-to-b from-indigo-50 to-purple-50">
-    <!-- Header -->
-<header class="bg-[#5B3C88] text-white sticky top-0 z-50 shadow-md font-quicksand">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center space-x-2">
-      <i class="fas fa-book-open text-3xl text-white"></i>
-      <h1 class="text-2xl font-baloo font-bold tracking-wide">
-        Lluqui <span class="text-[#A6B48F]">Ñawi</span>
-      </h1>
+  <!-- Header -->
+  <header
+    class="bg-[#5B3C88] text-white sticky top-0 z-50 shadow-md font-quicksand"
+  >
+    <div
+      class="container mx-auto px-4 py-4 flex justify-between items-center max-w-[1200px]"
+    >
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-book-open text-3xl text-white"></i>
+        <h1 class="text-2xl font-baloo font-bold tracking-wide">
+          Lluqui <span class="text-[#A6B48F]">Ñawi</span>
+        </h1>
+      </div>
+
+      <!-- Menú grande -->
+      <nav class="hidden md:flex space-x-6">
+        <button
+          onclick="openTab('home')"
+          class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300"
+          type="button"
+        >
+          Inicio
+        </button>
+        <button
+          onclick="openTab('features')"
+          class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300"
+          type="button"
+        >
+          Características
+        </button>
+        <button
+          onclick="openTab('info')"
+          class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300"
+          type="button"
+        >
+          Información
+        </button>
+      </nav>
+
+      <!-- Menú móvil -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden text-white focus:outline-none"
+        type="button"
+        aria-label="Toggle mobile menu"
+      >
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
     </div>
 
-    <!-- Menú grande -->
-    <nav class="hidden md:flex space-x-4">
-      <button onclick="openTab('home')" class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300">
-        Inicio
-      </button>
-      <button onclick="openTab('features')" class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300">
-        Características
-      </button>
-      <button onclick="openTab('info')" class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300">
-        Información
-      </button>
-    </nav>
-
-    <!-- Menú móvil -->
-    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-      <i class="fas fa-bars text-2xl"></i>
-    </button>
-  </div>
-
-  <!-- Contenido del menú móvil -->
-  <div id="mobile-menu" class="hidden md:hidden bg-[#5B3C88] px-4 pb-4">
-    <div class="flex flex-col space-y-3">
-      <button onclick="openTab('home'); toggleMobileMenu()" class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition">Inicio</button>
-      <button onclick="openTab('features'); toggleMobileMenu()" class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition">Características</button>
-      <button onclick="openTab('info'); toggleMobileMenu()" class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition">Información</button>
+    <!-- Contenido del menú móvil -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-[#5B3C88] px-4 pb-4 max-w-[1200px] mx-auto"
+    >
+      <div class="flex flex-col space-y-3">
+        <button
+          onclick="openTab('home'); toggleMobileMenu()"
+          class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition"
+          type="button"
+        >
+          Inicio
+        </button>
+        <button
+          onclick="openTab('features'); toggleMobileMenu()"
+          class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition"
+          type="button"
+        >
+          Características
+        </button>
+        <button
+          onclick="openTab('info'); toggleMobileMenu()"
+          class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition"
+          type="button"
+        >
+          Información
+        </button>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-    <!-- Contenido de las pestañas -->
-    <main class="container mx-auto px-4 py-12">
-        <!-- Pestaña Inicio -->
-        <div id="home" class="tab-content active">
-            <section class="flex flex-col md:flex-row items-center justify-between gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                        Descubre el placer de leer con <span class="text-indigo-600">Lluqui Ñawi</span>
-                    </h2>
-                    <p class="text-lg text-gray-600 mb-8">
-                        Una aplicación diseñada para fomentar la lectura en todas las edades. 
-                        Accede a recomendaciones personalizadas, desafíos de lectura y una 
-                        comunidad de amantes de los libros.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2 animate-pulse-slow">
-                            <i class="fab fa-google-play text-xl"></i>
-                            Descargar en Play Store
-                        </a>
-                        <button onclick="openTab('features')" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 border border-gray-200">
-                            Conoce más
-                        </button>
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="ojo.png" 
-                         alt="Libro abierto" 
-                         class="rounded-xl shadow-xl w-full max-w-md mx-auto transform rotate-3">
-                </div>
-            </section>
+  <!-- Contenido de las pestañas -->
+  <main class="container mx-auto px-4 py-12 max-w-[1200px]">
+    <!-- Pestaña Inicio -->
+    <div id="home" class="tab-content active">
+      <section
+        class="flex flex-col md:flex-row items-center justify-between gap-12"
+      >
+        <div class="md:w-1/2">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Descubre el placer de leer con
+            <span class="text-indigo-600">Lluqui Ñawi</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Una aplicación diseñada para fomentar la lectura en todas las edades.
+            Accede a recomendaciones personalizadas, desafíos de lectura y una
+            comunidad de amantes de los libros.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing"
+              target="_blank"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2 animate-pulse-slow"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-google-play text-xl"></i>
+              Descargar en Play Store
+            </a>
+            <button
+              onclick="openTab('features')"
+              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 border border-gray-200"
+              type="button"
+            >
+              Conoce más
+            </button>
+          </div>
         </div>
-        
-        <!-- Pestaña Características -->
-        <div id="features" class="tab-content">
-            <section>
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                    Nuestras <span class="text-indigo-600">Características</span>
-                </h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Características aquí -->
-                </div>
-                <div class="mt-12 text-center">
-                    <a href="https://play.google.com/store" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2">
-                        <i class="fab fa-google-play text-xl"></i>
-                        Descárgalo ahora
-                    </a>
-                </div>
-            </section>
+        <div class="md:w-1/2">
+          <img
+            src="ojo.png"
+            alt="Libro abierto"
+            class="rounded-xl shadow-xl w-full max-w-md mx-auto transform rotate-3"
+          />
         </div>
-        
-        <!-- Pestaña Información -->
-        <div id="info" class="tab-content">
-            <section>
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                    Acerca de <span class="text-indigo-600">Lluqui Ñawi</span>
-                </h2>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
-                    <div class="md:flex">
-                        <div class="md:w-1/2">
-                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                                 alt="Biblioteca" 
-                                 class="h-full w-full object-cover">
-                        </div>
-                        <div class="p-8 md:w-1/2">
-                            <h3 class="text-2xl font-semibold mb-4">Nuestra Misión</h3>
-                            <p class="text-gray-600 mb-6">
-                                Lluqui Ñawi ("Ojo Surdo" en quechua) nace con el propósito de fomentar la lectura en todas las edades, 
-                                haciendo accesible el mundo literario a través de tecnología innovadora y contenidos de calidad.
-                            </p>
-                            <p class="text-gray-600 mb-6">
-                                Creemos que la lectura es una herramienta fundamental para el desarrollo personal y social, 
-                                y trabajamos cada día para acercar los libros a más personas.
-                            </p>
-                            <div class="flex gap-4">
-                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Educación</span>
-                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Cultura</span>
-                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Tecnología</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-semibold text-center mb-8">Libros destacados</h3>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <!-- Libros destacados aquí -->
-                </div>
-                <div class="text-center">
-                    <p class="text-lg text-gray-600 mb-6">
-                        "Un libro abierto es un cerebro que habla; cerrado, un amigo que espera; olvidado, un alma que perdona; destruido, un corazón que llora."
-                    </p>
-                    <p class="text-gray-500">- Proverbio indio</p>
-                </div>
-            </section>
-        </div>
-        
-        <!-- Pestaña Contacto -->
-        <div id="contact" class="tab-content">
-            <section>
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                    <span class="text-indigo-600">Contáctanos</span>
-                </h2>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                    <div class="md:flex">
-                        <div class="md:w-1/2 p-8">
-                            <h3 class="text-2xl font-semibold mb-6">Déjanos un mensaje</h3>
-                            <form class="space-y-4">
-                                <div>
-                                    <label for="name" class="block text-gray-700 mb-1">Nombre</label>
-                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-gray-700 mb-1">Correo electrónico</label>
-                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                                </div>
-                                <div>
-                                    <label for="message" class="block text-gray-700 mb-1">Mensaje</label>
-                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-                                </div>
-                                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-all duration-300 w-full">Enviar mensaje</button>
-                            </form>
-                        </div>
-                        <div class="md:w-1/2 bg-indigo-50 p-8 flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Información de contacto</h3>
-                                <div class="space-y-4">
-                                    <div class="flex items-start gap-3">
-                                        <i class="fas fa-map-marker-alt mt-1 text-indigo-600"></i>
-                                        <div>
-                                            <h4 class="font-medium text-gray-800">Dirección</h4>
-                                            <p class="text-gray-600">Av. La Cultura 123, Cusco, Perú</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <i class="fas fa-envelope mt-1 text-indigo-600"></i>
-                                        <div>
-                                            <h4 class="font-medium text-gray-800">Correo</h4>
-                                            <p class="text-gray-600">contacto@lluquiñawi.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <i class="fas fa-phone-alt mt-1 text-indigo-600"></i>
-                                        <div>
-                                            <h4 class="font-medium text-gray-800">Teléfono</h4>
-                                            <p class="text-gray-600">+51 987 654 321</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-8">
-                                <h4 class="font-medium text-gray-800 mb-3">Síguenos</h4>
-                                <div class="flex gap-4">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-800 transition text-2xl">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-12 text-center">
-                    <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2">
-                        <i class="fab fa-google-play text-xl"></i>
-                        Descarga nuestra app
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="bg-[#5B3C88] text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-book-open text-2xl text-[#A6B48F]"></i>
-                        <h3 class="text-xl font-bold">
-                            <span class="text-[#A6B48F]">Lluqui</span> Ñawi
-                        </h3>
-                    </div>
-                    <p class="text-[#BCAEDC]">
-                        Fomentando la lectura, una página a la vez.
-                    </p>
-                </div>
+      </section>
+    </div>
 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
-                    <ul class="space-y-2">
-                        <li><button onclick="openTab('home')" class="text-[#BCAEDC] hover:text-white transition">Inicio</button></li>
-                        <li><button onclick="openTab('features')" class="text-[#BCAEDC] hover:text-white transition">Características</button></li>
-                        <li><button onclick="openTab('info')" class="text-[#BCAEDC] hover:text-white transition">Información</button></li>
-                    </ul>
-                </div>
+    <!-- Pestaña Características -->
+    <div id="features" class="tab-content">
+      <section>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
+          Nuestras <span class="text-indigo-600">Características</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Características aquí -->
+        </div>
+        <div class="mt-12 text-center">
+          <a
+            href="https://play.google.com/store"
+            target="_blank"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-google-play text-xl"></i>
+            Descárgalo ahora
+          </a>
+        </div>
+      </section>
+    </div>
 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-[#BCAEDC] hover:text-white transition">Términos y condiciones</a></li>
-                        <li><a href="#" class="text-[#BCAEDC] hover:text-white transition">Política de privacidad</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Descarga la app</h4>
-                    <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-[#A6B48F] hover:bg-[#8BA170] text-white px-4 py-2 rounded-lg transition">
-                        <i class="fab fa-google-play"></i>
-                        Play Store
-                    </a>
-                </div>
+    <!-- Pestaña Información -->
+    <div id="info" class="tab-content">
+      <section>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
+          Acerca de <span class="text-indigo-600">Lluqui Ñawi</span>
+        </h2>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+          <div class="md:flex">
+            <div class="md:w-1/2">
+              <img
+                src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                alt="Biblioteca"
+                class="h-full w-full object-cover"
+              />
             </div>
-
-            <hr class="my-8 border-[#BCAEDC]">
-
-            <div class="text-center text-[#BCAEDC]">
-                <p>&copy; 2025 Lluqui Ñawi. Todos los derechos reservados.</p>
+            <div class="p-8 md:w-1/2">
+              <h3 class="text-2xl font-semibold mb-4">Nuestra Misión</h3>
+              <p class="text-gray-600 mb-6">
+                Lluqui Ñawi ("Ojo Surdo" en quechua) nace con el propósito de fomentar
+                la lectura en todas las edades, haciendo accesible el mundo literario
+                a través de tecnología innovadora y contenidos de calidad.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Creemos que la lectura es una herramienta fundamental para el desarrollo
+                personal y social, y trabajamos cada día para acercar los libros a más personas.
+              </p>
+              <div class="flex gap-4">
+                <span
+                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
+                  >Educación</span
+                >
+                <span
+                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
+                  >Cultura</span
+                >
+                <span
+                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
+                  >Tecnología</span
+                >
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+        <h3 class="text-2xl font-semibold text-center mb-8">Libros destacados</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <!-- Libros destacados aquí -->
+        </div>
+        <div class="text-center">
+          <p class="text-lg text-gray-600 mb-6">
+            "Un libro abierto es un cerebro que habla; cerrado, un amigo que espera;
+            olvidado, un alma que perdona; destruido, un corazón que llora."
+          </p>
+          <p class="text-gray-500">- Proverbio indio</p>
+        </div>
+      </section>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Pestaña Contacto -->
+    <div id="contact" class="tab-content">
+      <section>
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+          <span class="text-indigo-600">Contáctanos</span>
+        </h2>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="md:flex">
+            <div class="md:w-1/2 p-8">
+              <h3 class="text-2xl font-semibold mb-6">Déjanos un mensaje</h3>
+              <form class="space-y-4">
+                <div>
+                  <label for="name" class="block text-gray-700 mb-1">Nombre</label>
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-700 mb-1"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                <div>
+                  <label for="message" class="block text-gray-700 mb-1">Mensaje</label>
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-all duration-300 w-full"
+                >
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
+            <div
+              class="md:w-1/2 bg-indigo-50 p-8 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-600">
+                  Información de contacto
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt mt-1 text-indigo-600"></i>
+                    <div>
+                      <h4 class="font-medium text-gray-800">Dirección</h4>
+                      <p class="text-gray-600">Av. La Cultura 123, Cusco, Perú</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <i class="fas fa-envelope mt-1 text-indigo-600"></i>
+                    <div>
+                      <h4 class="font-medium text-gray-800">Correo</h4>
+                      <p class="text-gray-600">contacto@lluquiñawi.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <i class="fas fa-phone-alt mt-1 text-indigo-600"></i>
+                    <div>
+                      <h4 class="font-medium text-gray-800">Teléfono</h4>
+                      <p class="text-gray-600">+51 987 654 321</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h4 class="font-medium text-gray-800 mb-3">Síguenos</h4>
+                <div class="flex gap-4">
+                  <a
+                    href="#"
+                    class="text-indigo-600 hover:text-indigo-800 transition text-2xl"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-indigo-600 hover:text-indigo-800 transition text-2xl"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-indigo-600 hover:text-indigo-800 transition text-2xl"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="text-indigo-600 hover:text-indigo-800 transition text-2xl"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <a
+            href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing"
+            target="_blank"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-google-play text-xl"></i>
+            Descarga nuestra app
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#5B3C88] text-white py-12">
+    <div class="container mx-auto px-4 max-w-[1200px]">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-book-open text-2xl text-[#A6B48F]"></i>
+            <h3 class="text-xl font-bold">
+              <span class="text-[#A6B48F]">Lluqui</span> Ñawi
+            </h3>
+          </div>
+          <p class="text-[#BCAEDC]">Fomentando la lectura, una página a la vez.</p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+          <ul class="space-y-2">
+            <li>
+              <button
+                onclick="openTab('home')"
+                class="text-[#BCAEDC] hover:text-white transition"
+                type="button"
+              >
+                Inicio
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="openTab('features')"
+                class="text-[#BCAEDC] hover:text-white transition"
+                type="button"
+              >
+                Características
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="openTab('info')"
+                class="text-[#BCAEDC] hover:text-white transition"
+                type="button"
+              >
+                Información
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="text-[#BCAEDC] hover:text-white transition"
+                >Términos y condiciones</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[#BCAEDC] hover:text-white transition"
+                >Política de privacidad</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Descarga la app</h4>
+          <a
+            href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing"
+            target="_blank"
+            class="inline-flex items-center gap-2 bg-[#A6B48F] hover:bg-[#8BA170] text-white px-4 py-2 rounded-lg transition"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-google-play"></i> Play Store
+          </a>
+        </div>
+      </div>
+
+      <hr class="my-8 border-[#BCAEDC]" />
+
+      <div class="text-center text-[#BCAEDC]">
+        <p>&copy; 2025 Lluqui Ñawi. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mostrar/Ocultar menú móvil
+    const mobileMenuBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle("hidden");
+    }
+    mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+
+    // Tabs funcionales
+    function openTab(tabId) {
+      const tabs = document.querySelectorAll(".tab-content");
+      const buttons = document.querySelectorAll(".tab-btn");
+
+      tabs.forEach((tab) => tab.classList.add("hidden"));
+      document.getElementById(tabId).classList.remove("hidden");
+
+      buttons.forEach((btn) => btn.classList.remove("text-[#BCAEDC]", "font-bold"));
+      // To prevent error if event is undefined, check event and event.target
+      if (event && event.target) {
+        event.target.classList.add("text-[#BCAEDC]", "font-bold");
+      }
+    }
+
+    // Activar 'home' por defecto
+    document.addEventListener("DOMContentLoaded", () => {
+      openTab("home");
+    });
+  </script>
 </body>
-    <script>
-  // Mostrar/Ocultar menú móvil
-  const mobileMenuBtn = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  function toggleMobileMenu() {
-    mobileMenu.classList.toggle("hidden");
-  }
-
-  mobileMenuBtn.addEventListener("click", toggleMobileMenu);
-
-  // Tabs funcionales
-  function openTab(tabId) {
-    const tabs = document.querySelectorAll(".tab-content");
-    const buttons = document.querySelectorAll(".tab-btn");
-
-    tabs.forEach(tab => tab.classList.add("hidden"));
-    document.getElementById(tabId).classList.remove("hidden");
-
-    buttons.forEach(btn => btn.classList.remove("text-[#BCAEDC]", "font-bold"));
-    event.target.classList.add("text-[#BCAEDC]", "font-bold");
-  }
-
-  // Activar 'home' por defecto
-  document.addEventListener("DOMContentLoaded", () => {
-    openTab('home');
-  });
-</script>
-
 </html>
+
