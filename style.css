@@ -31,6 +31,10 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.bg-hero {
+  background: linear-gradient(to bottom, #EDE9F5, #F7F6FB);
+}
+
 h1, h2, h3, h4 {
     font-family: 'Baloo 2', cursive;
 }
