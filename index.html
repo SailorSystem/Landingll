@@ -272,4 +272,33 @@
 
     <script src="script.js"></script>
 </body>
+    <script>
+  // Mostrar/Ocultar menú móvil
+  const mobileMenuBtn = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  function toggleMobileMenu() {
+    mobileMenu.classList.toggle("hidden");
+  }
+
+  mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+
+  // Tabs funcionales
+  function openTab(tabId) {
+    const tabs = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-btn");
+
+    tabs.forEach(tab => tab.classList.add("hidden"));
+    document.getElementById(tabId).classList.remove("hidden");
+
+    buttons.forEach(btn => btn.classList.remove("text-[#BCAEDC]", "font-bold"));
+    event.target.classList.add("text-[#BCAEDC]", "font-bold");
+  }
+
+  // Activar 'home' por defecto
+  document.addEventListener("DOMContentLoaded", () => {
+    openTab('home');
+  });
+</script>
+
 </html>
