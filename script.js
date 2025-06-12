@@ -1,16 +1,12 @@
-// Funcionalidad de pestañas
-function openTab(tabName) {
-    // Ocultar todas las pestañas
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(tab => {
-        tab.classList.remove('active');
-    });
-    
-    // Mostrar la pestaña seleccionada
-    document.getElementById(tabName).classList.add('active');
-    
-    // Cerrar menú móvil si está abierto
-    document.getElementById('mobile-menu').classList.add('hidden');
-}
+function openTab(tabId, btn) {
+    const tabs = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-btn");
 
-// Menú
+    tabs.forEach(tab => tab.classList.add("hidden"));
+    document.getElementById(tabId).classList.remove("hidden");
+
+    buttons.forEach(btn => btn.classList.remove("text-[#BCAEDC]", "font-bold"));
+    if (btn) {
+        btn.classList.add("text-[#BCAEDC]", "font-bold");
+    }
+}
