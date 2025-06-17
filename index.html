@@ -1,424 +1,393 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lluqui Ñawi - Fomento a la Lectura</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="font-sans bg-gradient-to-b from-indigo-50 to-purple-50">
-  <!-- Header -->
-  <header class="bg-[#5B3C88] text-white sticky top-0 z-50 shadow-md font-quicksand">
-    <div
-      class="container mx-auto px-4 py-4 flex justify-between items-center max-w-[1200px]"
-    >
-      <!-- Logo -->
-      <div class="flex items-center space-x-2 mb-4">
-        <i class="fas fa-book-open text-2xl text-[#A6B48F]"></i>
-        <h3 class="text-xl font-bold">
-          Lluqui <span class="text-[#A6B48F]">Ñawi</span>
-        </h3>
-      </div>
-
-      <!-- Menú grande -->
-      <nav class="hidden md:flex space-x-6" role="tablist" aria-label="Navegación principal">
-        <button
-          onclick="openTab(event, 'home')"
-          class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300"
-          role="tab"
-          aria-selected="true"
-          aria-controls="home"
-          id="tab-home"
-          type="button"
-        >
-          Inicio
-        </button>
-        <button
-          onclick="openTab(event, 'features')"
-          class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300"
-          role="tab"
-          aria-selected="false"
-          aria-controls="features"
-          id="tab-features"
-          type="button"
-        >
-          Características
-        </button>
-        <button
-          onclick="openTab(event, 'info')"
-          class="tab-btn px-4 py-2 rounded-lg hover:bg-[#BCAEDC] hover:text-[#5B3C88] transition duration-300"
-          role="tab"
-          aria-selected="false"
-          aria-controls="info"
-          id="tab-info"
-          type="button"
-        >
-          Información
-        </button>
-      </nav>
-
-      <!-- Menú móvil -->
-      <button
-        id="mobile-menu-button"
-        class="md:hidden text-white focus:outline-none"
-        type="button"
-        aria-label="Toggle mobile menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
-    </div>
-
-    <!-- Contenido del menú móvil -->
-    <div
-      id="mobile-menu"
-      class="hidden md:hidden bg-[#5B3C88] px-4 pb-4 max-w-[1200px] mx-auto"
-    >
-      <div class="flex flex-col space-y-3" role="tablist" aria-label="Navegación móvil">
-        <button
-          onclick="openTab(event, 'home'); toggleMobileMenu()"
-          class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition"
-          role="tab"
-          aria-selected="true"
-          aria-controls="home"
-          id="tab-home-mobile"
-          type="button"
-        >
-          Inicio
-        </button>
-        <button
-          onclick="openTab(event, 'features'); toggleMobileMenu()"
-          class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition"
-          role="tab"
-          aria-selected="false"
-          aria-controls="features"
-          id="tab-features-mobile"
-          type="button"
-        >
-          Características
-        </button>
-        <button
-          onclick="openTab(event, 'info'); toggleMobileMenu()"
-          class="tab-btn py-2 hover:bg-[#BCAEDC] hover:text-[#5B3C88] rounded-md transition"
-          role="tab"
-          aria-selected="false"
-          aria-controls="info"
-          id="tab-info-mobile"
-          type="button"
-        >
-          Información
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Contenido de las pestañas -->
-  <main class="container mx-auto px-4 py-12 max-w-[1200px]">
-    <!-- Pestaña Inicio -->
-    <div id="home" class="tab-content active" role="tabpanel" aria-labelledby="tab-home">
-      <section class="flex flex-col md:flex-row items-center justify-between gap-12">
-        <div class="md:w-1/2">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Descubre el placer de leer con
-            Lluqui <span class="text-[#A6B48F]">Ñawi</span>
-          </h2>
-          <p class="text-lg text-gray-600 mb-8">
-            Una aplicación diseñada para fomentar la lectura en todas las edades.
-            Accede a recomendaciones personalizadas, desafíos de lectura y una
-            comunidad de amantes de los libros.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing"
-              target="_blank"
-              class="inline-flex items-center gap-2 bg-[#A6B48F] hover:bg-[#8BA170] text-white px-4 py-2 rounded-lg transition"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-google-play text-xl"></i>
-              Descargar en Play Store
-            </a>
-            <button
-              onclick="openTab(event, 'features')"
-              class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300 border border-gray-200"
-              type="button"
-            >
-              Conoce más
-            </button>
-          </div>
-        </div>
-        <div class="md:w-1/2">
-          <img
-            src="ojo.png"
-            alt="Libro abierto"
-            class="rounded-xl shadow-xl w-full max-w-md mx-auto transform rotate-3"
-          />
-        </div>
-      </section>
-    </div>
-
-    <!-- Pestaña Características -->
-    <div
-      id="features"
-      class="tab-content"
-      role="tabpanel"
-      aria-labelledby="tab-features"
-      hidden
-    >
-      <section>
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
-        >
-          Nuestras <span class="text-indigo-600">Características</span>
-        </h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Características aquí -->
-        </div>
-        <div class="mt-12 text-center">
-          <a
-            href="https://play.google.com/store"
-            target="_blank"
-            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 inline-flex items-center gap-2"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-google-play text-xl"></i>
-            Descárgalo ahora
-          </a>
-        </div>
-      </section>
-    </div>
-
-    <!-- Pestaña Información -->
-    <div
-      id="info"
-      class="tab-content"
-      role="tabpanel"
-      aria-labelledby="tab-info"
-      hidden
-    >
-      <section>
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
-        >
-          Acerca de <span class="text-indigo-600">Lluqui Ñawi</span>
-        </h2>
-        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
-          <div class="md:flex">
-            <div class="md:w-1/2">
-              <img
-                src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"
-                alt="Biblioteca"
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <div class="p-8 md:w-1/2">
-              <h3 class="text-2xl font-semibold mb-4">Nuestra Misión</h3>
-              <p class="text-gray-600 mb-6">
-                Lluqui Ñawi (&quot;Ojo Surdo&quot; en quechua) nace con el propósito de fomentar
-                la lectura en todas las edades, haciendo accesible el mundo literario
-                a través de tecnología innovadora y contenidos de calidad.
-              </p>
-              <p class="text-gray-600 mb-6">
-                Creemos que la lectura es una herramienta fundamental para el desarrollo
-                personal y social, y trabajamos cada día para acercar los libros a más personas.
-              </p>
-              <div class="flex gap-4">
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Educación</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Cultura</span
-                >
-                <span
-                  class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
-                  >Tecnología</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <h3 class="text-2xl font-semibold text-center mb-8">Libros destacados</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <!-- Libros destacados aquí -->
-        </div>
-        <div class="text-center">
-          <p class="text-lg text-gray-600 mb-6">
-            &quot;Un libro abierto es un cerebro que habla; cerrado, un amigo que espera;
-            olvidado, un alma que perdona; destruido, un corazón que llora.&quot;
-          </p>
-          <p class="text-gray-500">- Proverbio indio</p>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-[#5B3C88] text-white py-12">
-    <div class="container mx-auto px-4 max-w-[1200px]">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center space-x-2 mb-4">
-            <i class="fas fa-book-open text-2xl text-[#A6B48F]"></i>
-            <h3 class="text-xl font-bold">
-              Lluqui <span class="text-[#A6B48F]">Ñawi</span>
-            </h3>
-          </div>
-          <p class="text-[#BCAEDC]">Fomentando la lectura, una página a la vez.</p>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
-          <ul class="space-y-2">
-            <li>
-              <button
-                onclick="openTab(event, 'home')"
-                class="text-[#BCAEDC] hover:text-white transition"
-                type="button"
-              >
-                Inicio
-              </button>
-            </li>
-            <li>
-              <button
-                onclick="openTab(event, 'features')"
-                class="text-[#BCAEDC] hover:text-white transition"
-                type="button"
-              >
-                Características
-              </button>
-            </li>
-            <li>
-              <button
-                onclick="openTab(event, 'info')"
-                class="text-[#BCAEDC] hover:text-white transition"
-                type="button"
-              >
-                Información
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Legal</h4>
-          <ul class="space-y-2">
-            <li>
-              <a href="#" class="text-[#BCAEDC] hover:text-white transition"
-                >Términos y condiciones</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-[#BCAEDC] hover:text-white transition"
-                >Política de privacidad</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Descarga la app</h4>
-          <a
-            href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing"
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-[#A6B48F] hover:bg-[#8BA170] text-white px-4 py-2 rounded-lg transition"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-google-play"></i> Play Store
-          </a>
-        </div>
-      </div>
-
-      <hr class="my-8 border-[#BCAEDC]" />
-
-      <div class="text-center text-[#BCAEDC]">
-        <p>&copy; 2025 Lluqui Ñawi. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Toggle mobile menu visibility and aria-expanded attribute
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById("mobile-menu");
-      const menuButton = document.getElementById("mobile-menu-button");
-      const isHidden = mobileMenu.classList.contains("hidden");
-      mobileMenu.classList.toggle("hidden");
-      menuButton.setAttribute("aria-expanded", isHidden ? "true" : "false");
-    }
-
-    // Tabs funcionales (supports desktop and mobile)
-    function openTab(event, tabId) {
-      const tabs = document.querySelectorAll(".tab-content");
-      const desktopButtons = document.querySelectorAll("nav.md\\:flex .tab-btn");
-      const mobileButtons = document.querySelectorAll("#mobile-menu .tab-btn");
-
-      // Hide all tabs and set aria-hidden
-      tabs.forEach((tab) => {
-        tab.hidden = true;
-        tab.classList.remove("active");
-        tab.setAttribute("aria-hidden", "true");
-      });
-
-      // Show selected tab and set aria-hidden
-      const selectedTab = document.getElementById(tabId);
-      if (selectedTab) {
-        selectedTab.hidden = false;
-        selectedTab.classList.add("active");
-        selectedTab.removeAttribute("aria-hidden");
-      }
-
-      // Remove active styles/aria-selected from all buttons
-      desktopButtons.forEach((btn) => {
-        btn.classList.remove("text-[#BCAEDC]", "font-bold");
-        btn.setAttribute("aria-selected", "false");
-      });
-      mobileButtons.forEach((btn) => {
-        btn.classList.remove("text-[#BCAEDC]", "font-bold");
-        btn.setAttribute("aria-selected", "false");
-      });
-
-      // Add active styles and aria-selected to clicked button (desktop)
-      if (event) {
-        const clickedButton = event.currentTarget;
-        if (clickedButton) {
-          clickedButton.classList.add("text-[#BCAEDC]", "font-bold");
-          clickedButton.setAttribute("aria-selected", "true");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLUQUI ÑAWI - Educación accesible</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: rgb(120, 89, 166);
+            color: rgb(255, 255, 255);
         }
-      }
-    }
+        
+        .section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .btn-download {
+            background-color: rgb(138, 106, 184);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .partner-logo {
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            transform: scale(1.1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-opacity-90 bg-purple-900 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-lavender flex items-center justify-center mr-2">
+                            <i class="fas fa-book-open text-white text-xl"></i>
+                        </div>
+                        <span class="text-white font-bold text-xl">LLUQUI ÑAWI</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#inicio" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#acerca" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Acerca de</a>
+                        <a href="#beneficios" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Beneficios</a>
+                        <a href="#contacto" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-purple-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-white">Inicio</a>
+                <a href="#acerca" class="block px-3 py-2 rounded-md text-base font-medium text-white">Acerca de</a>
+                <a href="#beneficios" class="block px-3 py-2 rounded-md text-base font-medium text-white">Beneficios</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white">Contacto</a>
+            </div>
+        </div>
+    </nav>
 
-    // Activate default tab on page load
-    document.addEventListener("DOMContentLoaded", () => {
-      // Activate first desktop tab button styles
-      const firstDesktopBtn = document.querySelector("nav.md\\:flex .tab-btn");
-      if (firstDesktopBtn) {
-        firstDesktopBtn.classList.add("text-[#BCAEDC]", "font-bold");
-        firstDesktopBtn.setAttribute("aria-selected", "true");
-      }
-      // Activate first mobile tab button styles
-      const firstMobileBtn = document.querySelector("#mobile-menu .tab-btn");
-      if (firstMobileBtn) {
-        firstMobileBtn.classList.add("text-[#BCAEDC]", "font-bold");
-        firstMobileBtn.setAttribute("aria-selected", "true");
-      }
-      // Show default tab
-      openTab(null, "home");
-    });
+    <!-- Hero Section -->
+    <section id="inicio" class="section flex items-center justify-center text-center">
+        <div class="parallax-bg" style="background-image: url('fondo.png')"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+            <div class="w-24 h-24 mx-auto rounded-full bg-lavender flex items-center justify-center mb-6">
+                <i class="fas fa-book-open text-white text-4xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">LLUQUI ÑAWI</h1>
+            <p class="text-xl md:text-2xl mb-8">Transformando la educación en comunidades rurales</p>
+            <p class="text-lg mb-12 italic">"Lee un poco cada día, y verás la diferencia."</p>
+            <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing" 
+            class="btn-download inline-flex items-center px-8 py-4 rounded-full bg-white text-purple-700 font-bold text-lg border border-purple-700 hover:bg-purple-100 transition"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-google-play mr-3 text-2xl text-purple-700"></i> Descargar en Play Store
+            </a>
 
-    // Toggle mobile menu event listener
-    document.getElementById("mobile-menu-button").addEventListener("click", toggleMobileMenu);
-  </script>
+
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#acerca" class="text-white animate-bounce inline-block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="acerca" class="section bg-purple-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Nuestra Historia</h2>
+                    <p class="mb-6 text-lg">LLUQUI ÑAWI nació en las comunidades rurales de Chugchilán, donde identificamos la necesidad de llevar educación accesible a zonas con limitada conectividad a internet.</p>
+                    <p class="mb-6 text-lg">Nuestro equipo está formado por educadores, desarrolladores y miembros de la comunidad comprometidos con el desarrollo educativo de nuestra región.</p>
+                    <p class="text-lg">Creemos que cada niño y niña merece acceso a materiales educativos de calidad, independientemente de su ubicación geográfica o situación económica.</p>
+                </div>
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="w-full h-80 bg-purple-900 rounded-2xl overflow-hidden">
+                            <img src="persona.png" 
+                                 alt="Comunidad rural" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-700 rounded-full flex items-center justify-center shadow-xl">
+                        <i class="fas fa-heart text-white text-5xl"></i>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center fade-in">Beneficios de LLUQUI ÑAWI</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-purple-800 rounded-xl p-8 text-center fade-in">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-lavender rounded-full flex items-center justify-center">
+                        <i class="fas fa-globe-americas text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Educación Accesible</h3>
+                    <p>Llevamos materiales educativos a zonas rurales sin necesidad de conexión a internet constante.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-purple-800 rounded-xl p-8 text-center fade-in" style="transition-delay: 0.2s">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-lavender rounded-full flex items-center justify-center">
+                        <i class="fas fa-robot text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4"> Chatbot</h3>
+                    <p>Facilita el aprendizaje interactivo, responde preguntas en tiempo real y brinda apoyo personalizado a cada estudiante.</p>
+                </div>
+
+                
+                <!-- Benefit 3 -->
+                <div class="bg-purple-800 rounded-xl p-8 text-center fade-in" style="transition-delay: 0.4s">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-lavender rounded-full flex items-center justify-center">
+                        <i class="fas fa-hands-helping text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Preservación Cultural</h3>
+                    <p>Contenidos en Kichwa y español que valoran y mantienen vivas nuestras tradiciones culturales.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-purple-800 rounded-xl p-8 text-center fade-in" style="transition-delay: 0.6s">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-lavender rounded-full flex items-center justify-center">
+                        <i class="fas fa-wifi text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Funciona sin Internet</h3>
+                    <p>Diseñada para zonas con conectividad limitada, con actualizaciones cuando hay conexión disponible.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16 fade-in">
+                <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing"
+                class="btn-download inline-flex items-center px-8 py-4 rounded-full bg-white text-purple-700 font-bold text-lg border border-purple-700 hover:bg-purple-100 transition"
+                target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-google-play mr-3 text-2xl text-purple-700"></i> Descargar ahora
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-16 bg-purple-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12 fade-in">Síguenos en redes sociales</h2>
+            
+            <div class="flex justify-center space-x-8 mb-16 fade-in">
+                <a href="#" class="w-16 h-16 bg-lavender rounded-full flex items-center justify-center text-white text-3xl hover:bg-purple-900 transition-all duration-300">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/lluqui_nawi?igsh=emtkMW93d2xteTk4" class="w-16 h-16 bg-lavender rounded-full flex items-center justify-center text-white text-3xl hover:bg-purple-900 transition-all duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-16 h-16 bg-lavender rounded-full flex items-center justify-center text-white text-3xl hover:bg-purple-900 transition-all duration-300">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+            </div>
+            
+            <p class="text-lg fade-in">Únete a nuestra comunidad y mantente informado sobre las últimas actualizaciones.</p>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="aliados" class="section py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center fade-in">Otras páginas que puedes visitar</h2>
+            
+             <!--<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center fade-in">
+                <div class="flex justify-center">
+                    <img src="https://via.placeholder.com/150x80?text=ONG+Amiga" alt="ONG Amiga" class="partner-logo h-16">
+                </div>
+
+            </div>-->
+            
+            <p class="text-center mt-12 max-w-3xl mx-auto fade-in">Otras paginas de proyetcos</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-purple-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-lavender flex items-center justify-center mr-2">
+                            <i class="fas fa-book-open text-white text-xl"></i>
+                        </div>
+                        <span class="text-white font-bold text-xl">LLUQUI ÑAWI</span>
+                    </div>
+                    <p class="mb-4">Educación accesible para comunidades rurales de Chugchilán y sus alrededores.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lluqui_nawi?igsh=emtkMW93d2xteTk4" class="text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white text-xl"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-xl font-bold mb-4">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-white hover:underline">Inicio</a></li>
+                        <li><a href="#acerca" class="text-white hover:underline">Acerca de</a></li>
+                        <li><a href="#beneficios" class="text-white hover:underline">Beneficios</a></li>
+                        <li><a href="#aliados" class="text-white hover:underline">Aliados</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Chugchilán, Ecuador</p>
+                    
+                <div class="mt-6">
+                    <a href="https://drive.google.com/file/d/1tvww67bXjLZ2lnYky-3czYLmbdRQJA4m/view?usp=sharing"
+                    class="btn-download inline-flex items-center px-6 py-3 rounded-full text-white font-bold text-sm"
+                    target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-google-play mr-2"></i> Play Store
+                    </a>
+                </div>
+
+                </div>
+            </div>
+            
+            <div class="border-t border-purple-700 mt-12 pt-8 text-center fade-in">
+                <p>&copy; 2025 LLUQUI ÑAWI. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Parallax effect
+            window.addEventListener('scroll', function() {
+                const parallaxBg = document.querySelector('.parallax-bg');
+                if (parallaxBg) {
+                    const scrollPosition = window.pageYOffset;
+                    parallaxBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
